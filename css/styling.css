@@ -70,8 +70,8 @@ base-text {
 
 h1 {
   font-family: 'Rufina', serif;
-  font-size: 1.75em;
-  font-weight: normal;
+  font-weight: 400;
+  font-size: 1.25em;
   line-height: 0.8em;
 }
 
@@ -91,7 +91,9 @@ img {
   z-index: 2;
 }
 
-/*.main-header {
+/*profile picture*/
+
+/*.profile {
 width: 8rem;
 height: 8rem;
 border: 7px solid #ddedff;
@@ -106,35 +108,20 @@ margin-bottom: -6rem;
   background: #fff url("../img/Nashville2.jpg") no-repeat center;
   background-size: cover;
   border-bottom: 5px #061A40 solid;
+  z-index: -1;
 }
 
-/*.headshot {
+.photo {
   float: right;
   width: 8rem;
   height: 8rem;
-  border: 7px solid #ddedff;
+  border: 4px solid #ddedff;
   background-clip: padding-box;
   border-radius: 50%;
   overflow: hidden;
   margin-top: -3rem;
-}*/
-
-/*headshot experiment*/
-.head-experiment {
-  position: fixed;
-  top: 140px;
-  left: 0;
-  width: 100px;
-  border: solid 3px #061A40;
-  border-left: 0;
-  background-color: #B9D6F2;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  }
-
-.head-experiment h1 {
 }
-
+
 .skyline {
   display: flex;
   justify-content: center;
@@ -142,11 +129,26 @@ margin-bottom: -6rem;
 }
 
 #search {
-  display: inline-block;
   background: rgba(255,255,255,0.7);
   padding: 10px;
   border: 1px solid red;
   font-size: 24px;
+}
+
+.headline {
+  font-family: 'Rufina', serif;
+  line-height: .8em;
+  text-align: center;
+}
+
+.headline h2 {
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+.headline h3 {
+  font-size: 1.1em;
+  font-weight: 200;
 }
 
 /**media query stuff**/
@@ -158,6 +160,49 @@ background-size: 50%;
 @media (max-width: 320px) {
   .main-header ul {
     display: none;
+  }
+}
+
+@media (min-width: 320px) {
+
+/*large screen - photo and name*/
+  .photo {
+    float: none;;
+    width: auto;
+    height: auto;
+    border: none;
+    background-clip: border-box;
+    border-radius: 0;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .profile {
+    position: fixed;
+    top: 140px;
+    left: 0;
+    width: 100px;
+    height: auto;
+    border: solid 3px #061A40;
+    border-left: 0;
+    background-color: #B9D6F2;
+    border-top-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    background-clip: border-box;
+    margin-top: 0;
+    }
+
+  .profile h2 {
+    font-weight: 400;
+    font-size: 1.25em;
+  }
+
+  .profile h3 {
+    font-weight: 200;
+    font-size: 1em;
+    text-align: center;
   }
 }
 
@@ -183,4 +228,6 @@ background-size: 50%;
   .main-header select, .main-header button {
     display:none;
   }
+
+
 }
