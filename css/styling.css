@@ -154,6 +154,38 @@ background: #C0C0C0 url('../img/Nashville1.jpg') no-repeat center;
 background-size: 50%;
 }*/
 
+/*image gallery styling*/
+
+#propSold {
+  list-style: none;
+}
+
+#propSold img {
+  max-width: 100%;
+  margin-bottom: 5px;
+}
+
+/*lightbox styling*/
+#overlay {
+  background:rgba(0,0,0,0.7);
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  display:none;
+  text-align:center;
+}
+
+#overlay img {
+ max-width: 290px;
+ margin-top: 30%;
+}
+
+#overlay p {
+ color:white;
+}
+
 @media (max-width: 320px) {
   .main-header ul {
     display: none;
