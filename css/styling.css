@@ -15,17 +15,33 @@ html {
 }
 
 /*Navigation*/
+/*Navigation*/
 .main-nav {
   display: flex;
   justify-content: flex-end;
   list-style: none;
+  margin: .5em auto .25em auto;
   padding-right: 15px;
-
 }
 
 .main-nav a {
   text-decoration: none;
   margin-left: 15px;
+}
+
+a:link {
+  color: #000;
+}
+
+a:visited {
+  color: #003559;
+}
+
+a:hover {
+  color: #003559;
+  border-bottom: 3px solid #E87835;
+  padding: 1px;
+
 }
 /*nav {
   margin-top: 2em;
