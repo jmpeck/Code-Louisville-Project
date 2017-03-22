@@ -8,13 +8,12 @@
       <link rel="stylesheet" href="css/normalize.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto|Rufina:400,700" rel="stylesheet" type='text/css'>
       <link rel="stylesheet" href="css/styling.css">
-      <link rel="stylesheet" href="css/responsive.css">
       <meta name="viewport" content="width=device-width, intial-scale=1">
   </head>
   <body>
     <div id="wrapper">
       <header>
-        <nav class="main-header wrap">
+        <nav class="main-header">
             <ul class="main-nav" id="main-nav">
               <li><a href="index.html">Home</a></li>
               <li><a href="neighborhoods.html">Neighborhoods</a></li>
@@ -40,8 +39,7 @@
         </div>
         <div class="container" id="propSold">
           <h1>Properties Sold</h1>
-  	        <ul class="gallery">
-              <div class="col-one">
+  	        <ul class="gallery clearfix">
                 <li>
                   <a href="http://pictures.realtracs.net/1777000/1777113/hr1777113-1.jpg"><img src="http://pictures.realtracs.net/1777000/1777113/hr1777113-1.jpg" alt="999 Windrowe Dr, Nashville"></a>
                   <div class="description">Add a description of the image here</div>
@@ -50,8 +48,6 @@
                   <a href="http://pictures.realtracs.net/1769000/1769646/hr1769646-1.jpg"><img src="http://pictures.realtracs.net/1769000/1769646/hr1769646-1.jpg" alt="7513 Henderson Dr, Nashville"></a>
                   <div class="description">Add a description of the image here</div>
                 </li>
-              </div>
-              <div class="col-two">
               	<li>
                   <a href="http://pictures.realtracs.net/1731000/1731307/hr1731307-1.jpg"><img src="http://pictures.realtracs.net/1731000/1731307/hr1731307-1.jpg" alt="2119 Guaranty Dr, Nashville"></a>
                   <div class="description">Add a description of the image here</div>
@@ -60,7 +56,7 @@
                   <a href="http://pictures.realtracs.net/1745000/1745005/hr1745005-1.jpg"><img src="http://pictures.realtracs.net/1745000/1745005/hr1745005-1.jpg" alt="1012 Anna Gannon Dr, LaVergne"></a>
                   <div class="description">Add a description of the image here</div>
                 </li>
-              </div>
+
           		<!-- <li><a href="images/sebastian.png"><img src="images/sebastian.png" width="100" alt="Sebastian by Mat Helme"></a></li>
           		<li><a href="images/skill-polish.png"><img src="images/skill-polish.png" width="100" alt="Skill Polish by Chris Michel"></a></li>
           		<li><a href="images/chuck.png"><img src="images/chuck.png" width="100" alt="Chuck by Mat Helme"></a></li>
@@ -70,47 +66,7 @@
           		<li><a href="images/treehouse_shop.jpg"><img src="images/treehouse_shop.jpg" width="100" alt="Treehouse Shop by Eric Smith"></a></li> -->
   	        </ul>
           </div>
-        <div class="name wrap">
-          <form action="index.html" method="post">
-
-          <h1>Sign Up</h1>
-          <fieldset>
-
-            <legend><span class="number">1</span>Basic Info</legend>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="user_email">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="user_password">
-          </fieldset>
-          <fieldset>
-            <legend>
-              <span class="number">2</span>Your real estate needs
-            </legend>
-              <label for="client-type">What best describes your current status?:</label>
-              <select id="job" name="user_job">
-                <optgroup label="Buyer">
-                  <option value="firsttime_buyer">First-time homebuyer</option>
-                  <option value="relocating_buyer">Relocating to Nashville</option>
-                  <option value="investment_buyer">Looking to flip</option>
-                  <option value="exploring_buyer">Just exploring</option>
-                </optgroup>
-                <optgroup label="Seller">
-                  <option value="firsttime-seller">First-time seller</option>
-                  <option value="relocating_seller">Leaving the area</option>
-                  <option value="exploring_seller">Testing the market</option>
-                </optgroup>
-              </select>
-            <label for="bio">Let me know how I can help you:</label>
-            <textarea id="bio" name="user_bio"></textarea>
-
-          </fieldset>
-          <button type="submit">Sign Up</button>
-        </form>
-        </div>
-
-    </main>
+      </main>
   </div>
   <script
   src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
@@ -119,7 +75,7 @@
   <script src="js/app.js"></script>
   </body>
 
-  <footer>
+  <footer class="wrap">
     <p>&copy; 2017 - Melissa Moss - All Rights Reserved</p>
     <a target="_blank" href="http://www.facebook.com/melissa.moss" class="bigger social facebook"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp; &nbsp;&nbsp;
       <a target="_blank" href="https://www.instagram.com/yournewnashvillehome/" class="bigger social instagram"><i class="fa fa-instagram"></i></a>
