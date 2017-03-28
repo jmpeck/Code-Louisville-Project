@@ -42,24 +42,6 @@ a:hover {
   padding: 1px;
 
 }
-/*nav {
-  margin-top: 2em;
-}
-
-nav ul {
-  list-style: none;
-  text-align: right;
-}
-
-nav li {
-  display: inline-block;
-}
-
-nav a {
-  text-decoration: none;
-  margin-left: 3em;
-}*/
-
 
 select {
 	width: 25%;
@@ -104,18 +86,6 @@ img {
   z-index: 2;
 }
 
-/*profile picture*/
-
-/*.profile {
-width: 8rem;
-height: 8rem;
-border: 7px solid #ddedff;
-background-clip: padding-box;
-border-radius: 50%;
-overflow: hidden;
-margin-bottom: -6rem;
-}*/
-
 .form-control {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;
@@ -149,32 +119,34 @@ margin-bottom: -6rem;
 .headline {
   font-family: 'Rufina', serif;
   line-height: .8em;
-  text-align: center;
 }
 
 .headline h2 {
   padding-top: .25em;
+  margin-bottom: .1em;
   font-size: 1.4em;
   font-weight: 400;
-}
+  text-align: right;
+  margin-right: 7em;
+  }
 
 .headline h3 {
   font-size: 1.1em;
   font-weight: 200;
+  text-align: right;
+  margin-right: 10rem;
+  border-bottom: 1px lightgray solid;
 }
 
-/**media query stuff**/
-/*border: red;
-background: #C0C0C0 url('../img/Nashville1.jpg') no-repeat center;
-background-size: 50%;
-}*/
+#propSold {
+  margin-top: 3em;
+}
 
 /*background for main container*/
 
 main {
-  background: #C0C0C0 url('../img/GraniteNashvilleRot2.jpg') no-repeat;
+  background: url('../img/GraniteNashvilleRot2.jpg') no-repeat;
   background-size: cover;
-  background-color: rgb(255, 255, 255, .3);
 }
 
 /*image gallery styling*/
@@ -221,8 +193,8 @@ div.description {
     font-size: .75em;
   }
 
-
 /*lightbox styling*/
+
 #overlay {
   background:rgba(0,0,0,0.7);
   width:100%;
@@ -265,6 +237,12 @@ div.description {
   padding: 0;
 }
 
+@media (max-width: 380px) {
+  .footer p {
+    font-size: .8em;
+  }
+}
+
 @media (min-width: 429px) {
 
     /*large screen - photo and name*/
@@ -296,17 +274,21 @@ div.description {
       margin-top: 0;
       }
 
-    .profile h2 {
+    .headline h2 {
       font-weight: 400;
       font-size: 1.25em;
       line-height: .8em;
+      text-align: center;
+      margin-right: 0;
     }
 
-    .profile h3 {
+    .headline h3 {
       font-weight: 200;
       font-size: 1em;
       text-align: center;
       line-height: .9em;
+      margin-right: 0;
+
     }
 
     .container {
@@ -317,6 +299,7 @@ div.description {
     }
 
     #propSold {
+      margin-top: 1.5em;
       padding-left: 110px;
     }
 
@@ -352,20 +335,6 @@ div.description {
     min-height: 20rem;
     margin: 0;
   }
-
-
-
-
-
-    /*.container {
-      width: 82%;
-      padding: 5px;
-    }*/
-
-    /*#propSold li {
-      display: inline-block;
-
-    }*/
 
   .main-header select, .main-header button {
     display:none;
@@ -404,27 +373,3 @@ div.description {
       width: 30%;
     }
   }
-
-/*@media (min-width: 900px) {
-  .col-one {
-    float: none;
-    width: auto;
-  }
-
-  .col-two {
-    float: none;
-    width: auto;
-  }
-
-  .gallery {
-
-  }
-
-  .gallery li {
-    max-width: 280px;
-    height: auto;
-    float: left;
-    display: inline-block;
-    margin-left: .7em;
-  }
-}*/
