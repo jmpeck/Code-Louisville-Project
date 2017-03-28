@@ -6,7 +6,10 @@
         Melissa Moss | Realtor
        </title>
       <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Roboto|Rufina:400,700" rel="stylesheet" type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+      <script src="https://use.fontawesome.com/02816adb35.js"></script>
       <link rel="stylesheet" href="css/styling.css">
       <meta name="viewport" content="width=device-width, intial-scale=1">
   </head>
@@ -25,7 +28,7 @@
     <main>
         <div id="skyline" class="skyline">
           <div class="search-box">
-            <input type="text" id="search" name="user_name"; placeholder="Address, City, Zip or MLS">
+            <input type="search" class="form-control" id="search" name="user_name" placeholder="Address, City, Zip or MLS">
           </div>
         </div>
         <div class="profile">
@@ -37,23 +40,23 @@
             <h3>Nashville Realtor</h3>
           </div>
         </div>
-        <div class="container" id="propSold">
-          <h1>Properties Sold</h1>
+        <div id="propSold">
+          <h1 class="listings">Current Listings</h1>
   	        <ul class="gallery clearfix">
                 <li>
-                  <a href="http://pictures.realtracs.net/1777000/1777113/hr1777113-1.jpg"><img src="http://pictures.realtracs.net/1777000/1777113/hr1777113-1.jpg" alt="999 Windrowe Dr, Nashville"></a>
+                  <a href="http://pictures.realtracs.net/1777000/1777113/hr1777113-1.jpg"><img src="http://pictures.realtracs.net/1777000/1777113/hr1777113-1.jpg" class="img-thumbnail" alt="999 Windrowe Dr, Nashville"></a>
                   <div class="description">Add a description of the image here</div>
                 </li>
             		<li>
-                  <a href="http://pictures.realtracs.net/1769000/1769646/hr1769646-1.jpg"><img src="http://pictures.realtracs.net/1769000/1769646/hr1769646-1.jpg" alt="7513 Henderson Dr, Nashville"></a>
+                  <a href="http://pictures.realtracs.net/1769000/1769646/hr1769646-1.jpg"><img src="http://pictures.realtracs.net/1769000/1769646/hr1769646-1.jpg" class="img-thumbnail" alt="7513 Henderson Dr, Nashville"></a>
                   <div class="description">Add a description of the image here</div>
                 </li>
               	<li>
-                  <a href="http://pictures.realtracs.net/1731000/1731307/hr1731307-1.jpg"><img src="http://pictures.realtracs.net/1731000/1731307/hr1731307-1.jpg" alt="2119 Guaranty Dr, Nashville"></a>
+                  <a href="http://pictures.realtracs.net/1731000/1731307/hr1731307-1.jpg"><img src="http://pictures.realtracs.net/1731000/1731307/hr1731307-1.jpg" class="img-thumbnail" alt="2119 Guaranty Dr, Nashville"></a>
                   <div class="description">Add a description of the image here</div>
                 </li>
           		  <li>
-                  <a href="http://pictures.realtracs.net/1745000/1745005/hr1745005-1.jpg"><img src="http://pictures.realtracs.net/1745000/1745005/hr1745005-1.jpg" alt="1012 Anna Gannon Dr, LaVergne"></a>
+                  <a href="http://pictures.realtracs.net/1745000/1745005/hr1745005-1.jpg"><img src="http://pictures.realtracs.net/1745000/1745005/hr1745005-1.jpg" class="img-thumbnail" alt="1012 Anna Gannon Dr, LaVergne"></a>
                   <div class="description">Add a description of the image here</div>
                 </li>
 
@@ -68,17 +71,19 @@
           </div>
       </main>
   </div>
-  <script
-  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="js/app.js"></script>
   </body>
 
-  <footer class="wrap">
-    <p>&copy; 2017 - Melissa Moss - All Rights Reserved</p>
-    <a target="_blank" href="http://www.facebook.com/melissa.moss" class="bigger social facebook"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp; &nbsp;&nbsp;
-      <a target="_blank" href="https://www.instagram.com/yournewnashvillehome/" class="bigger social instagram"><i class="fa fa-instagram"></i></a>
-
+  <footer class="footer">
+    <p>
+      &copy; 2017 - Melissa Moss - All Rights Reserved
+      <span>
+        <a target="_blank" href="http://www.facebook.com/melissa.moss" class="bigger social facebook"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.instagram.com/yournewnashvillehome/" class="bigger social instagram"><i class="fa fa-instagram fa-lg"></i></a>
+      </span>
+    </p>
   </footer>
 </html>
