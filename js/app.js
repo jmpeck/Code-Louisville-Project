@@ -1,3 +1,5 @@
+//Dropdown Menu for Smaller Screens
+
 //Create a select and append to #menu
 var $select = $("<select></select>");
 $(".main-header").append($select);
@@ -24,4 +26,30 @@ $("#main-nav a").each(function(){
 $select.change(function(){
   //Go to select's location
   window.location = $select.val();
+});
+
+//lightbox
+
+var $overlay = $('<div id="overlay"></div>');
+var $image = $("<img>");
+var $caption = $("<p></p>");
+
+$overlay.append($image);
+
+$overlay.append($caption);
+
+$("body").append($overlay);
+
+$("#propSold a").click(function(event){
+  event.preventDefault();
+  var imageLocation = $(this).attr("href");
+  $image.attr("src", imageLocation);
+  $overlay.show();
+  var captionText = $(this).children("img").attr("alt");
+  $caption.text(captionText);
+});
+
+$overlay.click(function(){
+  //Hide the overlay
+  $overlay.hide();
 });

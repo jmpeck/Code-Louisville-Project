@@ -1,63 +1,57 @@
-.clearfix{
-  *zoom:1
-}
-.clearfix:before,.clearfix:after{
-  content:"";display:table
-}
-  .clearfix:after{
-    clear:both
-}
+/*========Global Style=========*/
 
 * {
   box-sizing: border-box;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }
 
 html {
   font-size: 62.5%,
 }
 
-/*Navigation*/
+/*========Main Nav Bar=========*/
+
 .main-nav {
   display: flex;
   justify-content: flex-end;
   list-style: none;
-
-
+  margin: .5em auto .25em auto;
+  padding-right: 15px;
 }
 
 .main-nav a {
   text-decoration: none;
   margin-left: 15px;
 }
-/*nav {
-  margin-top: 2em;
+
+a:link {
+  color: #000;
 }
 
-nav ul {
-  list-style: none;
-  text-align: right;
+a:visited {
+  color: #003559;
 }
 
-nav li {
-  display: inline-block;
+a:hover {
+  color: #003559;
+  border-bottom: 3px solid #E87835;
+  padding: 1px;
+
 }
-
-nav a {
-  text-decoration: none;
-  margin-left: 3em;
-}*/
-
 
 select {
 	width: 25%;
 	margin: 11px  0 11px 2%;
 	}
 
-/*Colors*/
-
-nav a.selected {
-  color: tomato;
-}
+/*========Basic Styling for the Main Body=========*/
 
 base-text {
   font-family: 'Roboto', sans-serif;
@@ -69,9 +63,9 @@ base-text {
 }
 
 h1 {
-  font-family: 'Rufina', serif;
-  font-size: 1.75em;
-  font-weight: normal;
+  font-family: 'Josefin Sans', serif;
+  font-weight: 400;
+  font-size: 1.25em;
   line-height: 0.8em;
 }
 
@@ -79,10 +73,18 @@ body {
   background: #fff;
 }
 
+/*background for main container*/
+
+main {
+  background: url('../img/GraniteNashvillebg.jpg') no-repeat;
+  background-size: cover;
+}
+
+/*========Headline and Portrait Styling for Mobile=========*/
+
 header h1 {
   color: #fff;
 }
-
 
 img {
   width: auto;
@@ -91,88 +93,250 @@ img {
   z-index: 2;
 }
 
-/*.main-header {
-width: 8rem;
-height: 8rem;
-border: 7px solid #ddedff;
-background-clip: padding-box;
-border-radius: 50%;
-overflow: hidden;
-margin-bottom: -6rem;
-}*/
-
-.skyline {
-  min-height: 8rem;
-  background: #fff url("../img/Nashville2.jpg") no-repeat center;
-  background-size: cover;
-  border-bottom: 5px #061A40 solid;
-}
-
-/*.headshot {
-  float: right;
-  width: 8rem;
-  height: 8rem;
-  border: 7px solid #ddedff;
-  background-clip: padding-box;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-top: -3rem;
-}*/
-
-/*headshot experiment*/
-.head-experiment {
-  position: fixed;
-  top: 140px;
-  left: 0;
-  width: 100px;
-  border: solid 3px #061A40;
-  border-left: 0;
-  background-color: #B9D6F2;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  }
-
-.head-experiment h1 {
+.form-control {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border: 1px solid white;
+  font-size: 1em;
 }
 
 .skyline {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 20rem;
+  background: #fff url("../img/Nashville2.jpg") no-repeat center;
+  background-size: cover;
+  border-bottom: 5px #061A40 solid;
+  z-index: -1;
 }
 
-#search {
-  display: inline-block;
-  background: rgba(255,255,255,0.7);
-  padding: 10px;
-  border: 1px solid red;
-  font-size: 24px;
+.photo {
+  float: right;
+  width: 8rem;
+  height: 8rem;
+  border: 4px solid #ddedff;
+  background-clip: padding-box;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -3rem;
+}
+
+.headline {
+  font-family: 'Rufina', serif;
+  line-height: .8em;
 }
 
-/**media query stuff**/
-/*border: red;
-background: #C0C0C0 url('../img/Nashville1.jpg') no-repeat center;
-background-size: 50%;
-}*/
+.headline h2 {
+  padding-top: .25em;
+  margin-bottom: .1em;
+  font-size: 1.4em;
+  font-weight: 400;
+  text-align: right;
+  margin-right: 7em;
+  }
 
-@media (max-width: 320px) {
+.headline h3 {
+  font-size: 1.1em;
+  font-weight: 200;
+  text-align: right;
+  margin-right: 10rem;
+  border-bottom: 1px lightgray solid;
+}
+
+/*========Image Gallery=========*/
+
+#propSold {
+  margin-top: 3em;
+}
+
+.listings {
+  margin-top: .5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.listings h1 {
+  font-size: 1.25em;
+}
+
+.container {
+  margin-top: 3em;
+}
+
+.gallery {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.gallery img {
+  max-width: 280px;
+  border: 1px solid #000;
+  padding: 0;
+}
+
+.gallery a,
+.gallery a:hover {
+  padding: 0;
+}
+
+.gallery img:hover {
+  border: 2px solid #E87835;
+}
+
+div.description {
+    padding-bottom: 1em;
+    text-align: center;
+    margin-bottom: 4px;
+    font-size: .75em;
+  }
+
+/*========Lightbox Style=========*/
+
+#overlay {
+  background:rgba(0,0,0,0.7);
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  display:none;
+  text-align:center;
+}
+
+#overlay img {
+  max-width: 90%;
+  padding-top: 2em;
+}
+
+#overlay p {
+ color:white;
+}
+
+/*========Footer=========*/
+
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  margin-top: -1em;
+  margin-bottom: .15em;
+}
+
+.social {
+  margin-left: .25em;
+}
+
+.footer a,
+.footer a:hover {
+  color: #E87835;
+  border: none;
+  padding: 0;
+}
+
+/*========Media Queries=========*/
+
+/*footer spacing for xs screens*/
+
+@media (max-width: 380px) {
+  .footer p {
+    font-size: .8em;
+  }
+}
+
+@media (min-width: 429px) {
+
+/*portrait and name realignment for non-mobile screens*/
+
+    .photo {
+      float: none;
+      width: auto;
+      height: auto;
+      border: none;
+      background-clip: border-box;
+      border-radius: 0;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .profile {
+      position: fixed;
+      top: 140px;
+      left: 0;
+      width: 100px;
+      height: auto;
+      border: solid 3px #061A40;
+      border-left: 0;
+      background-color: #B9D6F2;
+      border-top-left-radius: 0;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 0;
+      background-clip: border-box;
+      margin-top: 0;
+      }
+
+    .headline h2 {
+      font-weight: 400;
+      font-size: 1.25em;
+      line-height: .8em;
+      text-align: center;
+      margin-right: 0;
+    }
+
+    .headline h3 {
+      font-weight: 200;
+      font-size: 1em;
+      text-align: center;
+      line-height: .9em;
+      margin-right: 0;
+
+    }
+
+/*image gallery for medium devices*/
+
+    .container {
+      margin-top: 0;
+      padding-left: 5px;
+      text-align: center;
+    }
+
+    #propSold {
+      margin-top: 1.5em;
+      padding-left: 110px;
+    }
+
+    .gallery {
+      text-align: left;
+      padding-right: 2em;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    div.description {
+        padding-bottom: 1em;
+        text-align: left;
+        margin-bottom: 4px;
+        font-size: 1em;
+      }
+}
+
+@media (max-width: 566px) {
+
+/*this code keeps the main nav from showing for smaller screens*/
+
   .main-header ul {
     display: none;
   }
-}
 
-@media (min-width: 320px) and (max-width: 568px) {
-  .main-header ul {
-    display: none;
   }
 
-}
-
-@media (min-width: 568px) {
-  #wrapper {
-    max-width: 970px;
-    margin: 0 auto;
-  }
+@media (min-width: 567px) {
 
   #skyline {
     max-width: none;
@@ -180,7 +344,46 @@ background-size: 50%;
     margin: 0;
   }
 
+/*this code gets rid of the drop-down menu for larger screens*/
+
   .main-header select, .main-header button {
     display:none;
   }
-}
+
+  .wrap {
+    margin: 0 100px;
+  }
+
+/*image gallery for large screens*/
+
+  .gallery {
+    text-align: left;
+    padding-right: 0;
+  }
+
+  .gallery li {
+    display: inline-block;
+    width: 45%;
+    margin-right: .5em;
+  }
+
+  }
+
+  @media (min-width: 780px) {
+    #overlay img {
+      max-height: 90%;
+    }
+
+    .form-control {
+      width: 500px;
+    }
+  }
+
+  @media (min-width: 900px) {
+
+/*image gallery for very large screens*/
+
+    .gallery li {
+      width: 30%;
+    }
+  }
