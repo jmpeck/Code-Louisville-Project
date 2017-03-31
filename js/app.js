@@ -26,6 +26,18 @@ $select.change(function(){
   window.location = $select.val();
 });
 
+//about-overlay jquery
+var $aboutOverlay = $('<div id="about-overlay"></div>');
+var $story = $("<p></p>");
+
+$aboutOverlay.append($story);
+
+$("body").append($aboutOverlay);
+
+$(".profile a").click(function(event){
+  event.preventDefault();
+})
+
 //lightbox jquery
 var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
