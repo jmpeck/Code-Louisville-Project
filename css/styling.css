@@ -1,3 +1,5 @@
+/*========Global Style=========*/
+
 * {
   box-sizing: border-box;
 }
@@ -14,7 +16,8 @@ html {
   font-size: 62.5%,
 }
 
-/*Navigation*/
+/*========Main Nav Bar=========*/
+
 .main-nav {
   display: flex;
   justify-content: flex-end;
@@ -48,11 +51,7 @@ select {
 	margin: 11px  0 11px 2%;
 	}
 
-/*Colors*/
-
-nav a.selected {
-  color: tomato;
-}
+/*========Basic Styling for the Main Body=========*/
 
 base-text {
   font-family: 'Roboto', sans-serif;
@@ -74,10 +73,18 @@ body {
   background: #fff;
 }
 
+/*background for main container*/
+
+main {
+  background: url('../img/GraniteNashvillebg.jpg') no-repeat;
+  background-size: cover;
+}
+
+/*========Headline and Portrait Styling for Mobile=========*/
+
 header h1 {
   color: #fff;
 }
-
 
 img {
   width: auto;
@@ -92,7 +99,6 @@ img {
   border: 1px solid white;
   font-size: 1em;
 }
-
 
 .skyline {
   display: flex;
@@ -138,18 +144,11 @@ img {
   border-bottom: 1px lightgray solid;
 }
 
+/*========Image Gallery=========*/
+
 #propSold {
   margin-top: 3em;
 }
-
-/*background for main container*/
-
-main {
-  background: url('../img/GraniteNashvillebg.jpg') no-repeat;
-  background-size: cover;
-}
-
-/*image gallery styling*/
 
 .listings {
   margin-top: .5em;
@@ -193,7 +192,7 @@ div.description {
     font-size: .75em;
   }
 
-/*lightbox styling*/
+/*========Lightbox Style=========*/
 
 #overlay {
   background:rgba(0,0,0,0.7);
@@ -215,7 +214,7 @@ div.description {
  color:white;
 }
 
-/*footer*/
+/*========Footer=========*/
 
 .footer {
   text-align: center;
@@ -237,6 +236,10 @@ div.description {
   padding: 0;
 }
 
+/*========Media Queries=========*/
+
+/*footer spacing for xs screens*/
+
 @media (max-width: 380px) {
   .footer p {
     font-size: .8em;
@@ -245,7 +248,8 @@ div.description {
 
 @media (min-width: 429px) {
 
-    /*large screen - photo and name*/
+/*portrait and name realignment for non-mobile screens*/
+
     .photo {
       float: none;
       width: auto;
@@ -291,11 +295,12 @@ div.description {
 
     }
 
+/*image gallery for medium devices*/
+
     .container {
       margin-top: 0;
       padding-left: 5px;
       text-align: center;
-
     }
 
     #propSold {
@@ -322,6 +327,9 @@ div.description {
 }
 
 @media (max-width: 566px) {
+
+/*this code keeps the main nav from showing for smaller screens*/
+
   .main-header ul {
     display: none;
   }
@@ -336,6 +344,8 @@ div.description {
     margin: 0;
   }
 
+/*this code gets rid of the drop-down menu for larger screens*/
+
   .main-header select, .main-header button {
     display:none;
   }
@@ -343,6 +353,8 @@ div.description {
   .wrap {
     margin: 0 100px;
   }
+
+/*image gallery for large screens*/
 
   .gallery {
     text-align: left;
@@ -368,6 +380,8 @@ div.description {
   }
 
   @media (min-width: 900px) {
+
+/*image gallery for very large screens*/
 
     .gallery li {
       width: 30%;

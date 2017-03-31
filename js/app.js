@@ -1,3 +1,5 @@
+//Dropdown Menu for Smaller Screens
+
 //Create a select and append to #menu
 var $select = $("<select></select>");
 $(".main-header").append($select);
@@ -26,7 +28,8 @@ $select.change(function(){
   window.location = $select.val();
 });
 
-//lightbox jquery
+//lightbox
+
 var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
 var $caption = $("<p></p>");
