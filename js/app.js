@@ -26,18 +26,58 @@ $select.change(function(){
   window.location = $select.val();
 });
 
-//about-overlay jquery
-var $aboutOverlay = $('<div id="about-overlay"></div>');
-var $story = $("<p></p>");
+//email form
 
-$aboutOverlay.append($story);
+  //on click of portrait open email form-control
 
-$("body").append($aboutOverlay);
+  //take email form data
 
-$(".profile a").click(function(event){
-  event.preventDefault();
-})
+  //send email form data
+$function() {
+  var $form = $("#contactForm");
+  var $formMessages = $(#formMessages);
+  //event listener for the contact form
+    $form.submit(function(event) {
+      //stop the browser from submitting form
+      event.preventDefault();
+      //serialize the form data
+      var $formData = $form.serialize();
+      //Submit the form using ajax
+      $.ajax({
+        type: 'POST',
+        url: $form.attr('action'),
+        data: $formData
+      })
+      .done(function(response) {
+        //Make sure that the formMessages div has the "success" class
+        $formMessages.removeClass("error");
+        $formMessages.addClass("success");
 
+        // Set the message text
+        $formMessages.text(response);
+
+        //Clear the form
+        $("#name").val('');
+        $("#email").val('');
+        $('#message').val('');
+      })
+      .fail(function(data) {
+        //Make sure the formMessages div has the 'error' class
+        $formMessages.removeClass('success');
+        $formMessages.addClass('error');
+
+        // Set the message text.
+        if (data.responseText !== '') {
+          $formMessages.text(data.responseText);
+        } else {
+          $formMessages.text("Oops! An error occured and your message could not be sent.")
+        }
+
+      });
+    }
+
+  )
+}
 //lightbox jquery
 var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
